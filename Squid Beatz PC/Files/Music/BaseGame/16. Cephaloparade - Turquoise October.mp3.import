@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cut0kgpa5vmws"
+path="res://.godot/imported/16. Cephaloparade - Turquoise October.mp3-d015b4fc5d8330609ae0c79487ce0cb3.mp3str"
+
+[deps]
+
+source_file="res://Files/Music/BaseGame/16. Cephaloparade - Turquoise October.mp3"
+dest_files=["res://.godot/imported/16. Cephaloparade - Turquoise October.mp3-d015b4fc5d8330609ae0c79487ce0cb3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
