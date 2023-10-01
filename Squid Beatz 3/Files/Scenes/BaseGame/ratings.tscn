@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=3 uid="uid://cl01rqseg57vp"]
+
+[ext_resource type="Script" path="res://Files/Scripts/BaseGame/ratings.gd" id="1_375k7"]
+[ext_resource type="Texture2D" uid="uid://d24q47xcovs7w" path="res://Files/Sprites/SpriteSetA/Ratings/FRESH.png" id="2_ycvpl"]
+[ext_resource type="Texture2D" uid="uid://l8dp3k15iqva" path="res://Files/Sprites/SpriteSetA/Ratings/FreshSquidRating.png" id="3_qrbei"]
+[ext_resource type="Texture2D" uid="uid://ppjyun3428y8" path="res://Files/Sprites/SpriteSetA/Ratings/FreshOctoRating.png" id="4_s4x1v"]
+[ext_resource type="FontFile" uid="uid://b15cqx1bpnwi3" path="res://Files/Sprites/SpriteSetA/foo.ttf" id="5_hok0n"]
+[ext_resource type="Texture2D" uid="uid://twim1ny5q60y" path="res://Files/Sprites/SpriteSetA/Ratings/GOOD.png" id="5_pleju"]
+[ext_resource type="Texture2D" uid="uid://b6afpbi1cbfja" path="res://Files/Sprites/SpriteSetA/Ratings/OctoRating.png" id="6_02w8y"]
+[ext_resource type="Texture2D" uid="uid://q5ff0ipgfpiy" path="res://Files/Sprites/SpriteSetA/Ratings/BAD.png" id="7_7tmso"]
+[ext_resource type="Texture2D" uid="uid://btqo5nnpbompc" path="res://Files/Sprites/SpriteSetA/Ratings/BadOctoRating.png" id="8_30ggx"]
+[ext_resource type="Texture2D" uid="uid://bgd3jr3iejwxw" path="res://Files/Sprites/SpriteSetA/Ratings/MISS.png" id="9_brrqb"]
+[ext_resource type="Texture2D" uid="uid://c48sl5uv2x1te" path="res://Files/Sprites/SpriteSetA/Ratings/MissSquidRating.png" id="10_p7jb6"]
+
+[node name="Ratings" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_375k7")
+
+[node name="FRESH" type="Node2D" parent="."]
+visible = false
+
+[node name="Fresh" type="Sprite2D" parent="FRESH"]
+position = Vector2(10.5, 0)
+texture = ExtResource("2_ycvpl")
+
+[node name="FreshSquidRating" type="Sprite2D" parent="FRESH"]
+position = Vector2(-45.5, 0)
+texture = ExtResource("3_qrbei")
+
+[node name="FreshOctoRating" type="Sprite2D" parent="FRESH"]
+position = Vector2(46.5, 0)
+texture = ExtResource("4_s4x1v")
+
+[node name="Combo" type="Label" parent="FRESH"]
+offset_left = 58.5
+offset_top = -10.5
+offset_right = 98.5
+offset_bottom = 15.5
+theme_override_fonts/font = ExtResource("5_hok0n")
+theme_override_font_sizes/font_size = 18
+
+[node name="GOOD" type="Node2D" parent="."]
+visible = false
+
+[node name="Good" type="Sprite2D" parent="GOOD"]
+position = Vector2(38.5, 1)
+texture = ExtResource("5_pleju")
+
+[node name="OctoRating" type="Sprite2D" parent="GOOD"]
+position = Vector2(-22.5, 1)
+texture = ExtResource("6_02w8y")
+
+[node name="Combo" type="Label" parent="GOOD"]
+offset_left = 38.0
+offset_top = -10.5
+offset_right = 78.0
+offset_bottom = 15.5
+theme_override_fonts/font = ExtResource("5_hok0n")
+theme_override_font_sizes/font_size = 18
+
+[node name="BAD" type="Node2D" parent="."]
+visible = false
+
+[node name="Bad" type="Sprite2D" parent="BAD"]
+position = Vector2(42, 1)
+texture = ExtResource("7_7tmso")
+
+[node name="BadOctoRating" type="Sprite2D" parent="BAD"]
+position = Vector2(-19, 1)
+texture = ExtResource("8_30ggx")
+
+[node name="MISS" type="Node2D" parent="."]
+visible = false
+
+[node name="Miss" type="Sprite2D" parent="MISS"]
+position = Vector2(38.5, 1)
+texture = ExtResource("9_brrqb")
+
+[node name="MissSquidRating" type="Sprite2D" parent="MISS"]
+position = Vector2(-20.5, 1)
+texture = ExtResource("10_p7jb6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

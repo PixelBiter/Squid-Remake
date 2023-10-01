@@ -1,0 +1,133 @@
+[gd_scene load_steps=15 format=3 uid="uid://blpj88kgphoak"]
+
+[ext_resource type="Script" path="res://Files/Scripts/BaseGame/squid_beatz_3.gd" id="1_ynlfy"]
+[ext_resource type="AudioStream" uid="uid://doewux5wii52p" path="res://Files/Music/BaseGame/1. Inkoming! - Wet Floor.mp3" id="2_iu8ud"]
+[ext_resource type="Texture2D" uid="uid://c5fvgil4c4wrg" path="res://Files/Sprites/SpriteSetA/Hitter/HorizontalBar.png" id="2_ns0bj"]
+[ext_resource type="Texture2D" uid="uid://bx56sg1w15wb4" path="res://Files/Sprites/SpriteSetA/Hitter/Background.png" id="2_x4vdv"]
+[ext_resource type="AudioStream" uid="uid://du7lo3g0m5gip" path="res://Files/Audio/HitSFX/BaseGame/Set1/Minigame_SD01.wav" id="3_5xsfn"]
+[ext_resource type="Texture2D" uid="uid://dl5krqp2kfca2" path="res://Files/Sprites/SpriteSetA/Hitter/Instructions.png" id="3_aivtu"]
+[ext_resource type="AudioStream" uid="uid://eylgbp33goq3" path="res://Files/Audio/HitSFX/BaseGame/Set1/Minigame_Kick01.wav" id="4_5rjb7"]
+[ext_resource type="Texture2D" uid="uid://bu5q3dyf2tqeo" path="res://Files/Sprites/SpriteSetA/Hitter/BarHitterFace.png" id="4_qyjiu"]
+[ext_resource type="Texture2D" uid="uid://ddrxr70js2mc3" path="res://Files/Sprites/SpriteSetA/Hitter/BarHitterShoulder.png" id="5_84j6e"]
+[ext_resource type="AudioStream" uid="uid://2mq2rigbigl" path="res://Files/Audio/HitSFX/BaseGame/Set1/Minigame_Tamb.wav" id="5_x7rhs"]
+[ext_resource type="AudioStream" uid="uid://byvmho2cmj0dr" path="res://Files/Audio/HitSFX/BaseGame/Set1/Minigame_Clap01.wav" id="6_3m7f3"]
+[ext_resource type="FontFile" uid="uid://b15cqx1bpnwi3" path="res://Files/Sprites/SpriteSetA/foo.ttf" id="7_yow33"]
+[ext_resource type="Texture2D" uid="uid://du8uuui4a4i5c" path="res://Files/Sprites/SpriteSetA/Ratings/SilverSquid.png" id="13_erh3d"]
+[ext_resource type="Texture2D" uid="uid://errsfuwwpp6x" path="res://Files/Sprites/SpriteSetA/Ratings/GoldSquid.png" id="14_oqrnd"]
+
+[node name="SquidBeatz3" type="Node2D"]
+script = ExtResource("1_ynlfy")
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("2_iu8ud")
+
+[node name="Face1" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("3_5xsfn")
+
+[node name="Face2" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("4_5rjb7")
+volume_db = 4.0
+
+[node name="Shoulder1" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("5_x7rhs")
+
+[node name="Shoulder2" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("6_3m7f3")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -4096
+z_as_relative = false
+position = Vector2(960, 540)
+texture = ExtResource("2_x4vdv")
+
+[node name="HorizontalBar" type="Sprite2D" parent="Background"]
+position = Vector2(100, 750)
+scale = Vector2(3840, 2)
+texture = ExtResource("2_ns0bj")
+
+[node name="Instructions" type="Sprite2D" parent="Background"]
+position = Vector2(1200, 1005)
+scale = Vector2(2, 2)
+texture = ExtResource("3_aivtu")
+
+[node name="BarHitterFace" type="Sprite2D" parent="Background"]
+position = Vector2(300, 796)
+scale = Vector2(2, 2)
+texture = ExtResource("4_qyjiu")
+hframes = 3
+
+[node name="BarHitterShoulder" type="Sprite2D" parent="Background"]
+position = Vector2(300, 704)
+scale = Vector2(2, 2)
+texture = ExtResource("5_84j6e")
+hframes = 3
+
+[node name="Title" type="Label" parent="Background"]
+offset_left = 144.0
+offset_top = 36.0
+offset_right = 184.0
+offset_bottom = 97.0
+theme_override_fonts/font = ExtResource("7_yow33")
+theme_override_font_sizes/font_size = 50
+
+[node name="SilverSquid" type="Sprite2D" parent="Background"]
+position = Vector2(1700, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("13_erh3d")
+
+[node name="GoldSquid" type="Sprite2D" parent="Background"]
+position = Vector2(1700, 480)
+scale = Vector2(2, 2)
+texture = ExtResource("14_oqrnd")
+
+[node name="GoldLabel" type="Label" parent="Background"]
+offset_left = 1741.0
+offset_top = 457.0
+offset_right = 1781.0
+offset_bottom = 480.0
+theme_override_fonts/font = ExtResource("7_yow33")
+theme_override_font_sizes/font_size = 32
+
+[node name="SilverLabel" type="Label" parent="Background"]
+offset_left = 1741.0
+offset_top = 537.0
+offset_right = 1781.0
+offset_bottom = 560.0
+theme_override_fonts/font = ExtResource("7_yow33")
+theme_override_font_sizes/font_size = 32
+
+[node name="Timer" type="Node2D" parent="."]
+
+[node name="BeatTimer" type="Timer" parent="Timer"]
+
+[node name="WaitTimer" type="Timer" parent="Timer"]
+wait_time = 1e+06
+one_shot = true
+
+[node name="InputTimer1" type="Timer" parent="Timer"]
+wait_time = 0.05
+one_shot = true
+
+[node name="Medals" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="MedalSprite" type="Sprite2D" parent="Medals"]
+position = Vector2(52, 34.5)
+
+[node name="Originally Made By" type="Label" parent="."]
+offset_left = 6.0
+offset_top = 1017.0
+offset_right = 323.0
+offset_bottom = 1097.0
+theme_override_fonts/font = ExtResource("7_yow33")
+theme_override_font_sizes/font_size = 20
+text = "Base Made By PixelToad
+ (pixeltoad on discord)"
+
+[connection signal="timeout" from="Timer/BeatTimer" to="." method="_on_beat_timer_timeout"]
+[connection signal="timeout" from="Timer/WaitTimer" to="." method="_on_wait_timer_timeout"]
+[connection signal="timeout" from="Timer/InputTimer1" to="." method="_on_input_timer_1_timeout"]

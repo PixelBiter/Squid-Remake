@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj4a8u4t5gq2t"]
+
+[ext_resource type="Script" path="res://Files/Scripts/BaseGame/movement.gd" id="1_ddjim"]
+[ext_resource type="Script" path="res://Files/Scripts/BaseGame/Bar.gd" id="2_3jnbb"]
+
+[node name="Bars" type="Node2D"]
+z_index = -1
+z_as_relative = false
+script = ExtResource("1_ddjim")
+
+[node name="BarSprite" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+script = ExtResource("2_3jnbb")

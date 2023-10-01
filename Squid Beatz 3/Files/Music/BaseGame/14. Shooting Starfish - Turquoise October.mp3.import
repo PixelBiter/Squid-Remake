@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://budktbkmimftj"
+path="res://.godot/imported/14. Shooting Starfish - Turquoise October.mp3-90c3a73f92299b915157f6e643eeead1.mp3str"
+
+[deps]
+
+source_file="res://Files/Music/BaseGame/14. Shooting Starfish - Turquoise October.mp3"
+dest_files=["res://.godot/imported/14. Shooting Starfish - Turquoise October.mp3-90c3a73f92299b915157f6e643eeead1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

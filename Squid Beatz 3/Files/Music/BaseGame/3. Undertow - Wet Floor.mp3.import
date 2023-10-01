@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dp8eawfox6kqa"
+path="res://.godot/imported/3. Undertow - Wet Floor.mp3-b8517833510a55686651a61f5ef5896f.mp3str"
+
+[deps]
+
+source_file="res://Files/Music/BaseGame/3. Undertow - Wet Floor.mp3"
+dest_files=["res://.godot/imported/3. Undertow - Wet Floor.mp3-b8517833510a55686651a61f5ef5896f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

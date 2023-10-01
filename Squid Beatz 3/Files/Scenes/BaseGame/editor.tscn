@@ -1,0 +1,365 @@
+[gd_scene load_steps=21 format=3 uid="uid://b8tuht6pokg0i"]
+
+[ext_resource type="Script" path="res://Files/Scripts/BaseGame/editor.gd" id="1_6j6c3"]
+[ext_resource type="PackedScene" uid="uid://blpj88kgphoak" path="res://squid_beatz_3.tscn" id="1_xucjw"]
+[ext_resource type="Texture2D" uid="uid://4mkme7pofaq1" path="res://Files/Sprites/SpriteSetA/Editor/MenuSettingsSelect.png" id="3_wgmkn"]
+[ext_resource type="Texture2D" uid="uid://cgto83ybrg5b7" path="res://Files/Sprites/SpriteSetA/Editor/MenuBarSelect.png" id="4_8063d"]
+[ext_resource type="Texture2D" uid="uid://pyhyolws8dq8" path="res://Files/Sprites/SpriteSetA/Editor/IncrementFlick.png" id="4_k5qy1"]
+[ext_resource type="Texture2D" uid="uid://bs3fqjwd5yfeo" path="res://Files/Sprites/SpriteSetA/Editor/SAVEFlick.png" id="5_mp0q0"]
+[ext_resource type="Texture2D" uid="uid://dseay050vgbg1" path="res://Files/Sprites/SpriteSetA/Editor/MenuNoteSelect.png" id="5_umxm4"]
+[ext_resource type="Texture2D" uid="uid://dvlmu4dog0lmc" path="res://Files/Sprites/SpriteSetA/Editor/BigBeatFlick.png" id="5_xgwyc"]
+[ext_resource type="FontFile" uid="uid://b15cqx1bpnwi3" path="res://Files/Sprites/SpriteSetA/foo.ttf" id="6_75ww1"]
+[ext_resource type="Texture2D" uid="uid://dtev2r7ewbucu" path="res://Files/Sprites/SpriteSetA/Editor/DoubleFaceFlick.png" id="6_87tee"]
+[ext_resource type="Texture2D" uid="uid://mkpiikcy1n15" path="res://Files/Sprites/SpriteSetA/Editor/SmallBeatFlick.png" id="6_tyj44"]
+[ext_resource type="Texture2D" uid="uid://8g24ph0l0hoa" path="res://Files/Sprites/SpriteSetA/Editor/DoubleShoulderFlick.png" id="7_lhu3k"]
+[ext_resource type="Texture2D" uid="uid://bi16u86i3sh0i" path="res://Files/Sprites/SpriteSetA/Editor/EraseFlick.png" id="8_xu0do"]
+[ext_resource type="Texture2D" uid="uid://dfqpwv0egk5s2" path="res://Files/Sprites/SpriteSetA/Editor/FaceFlick.png" id="9_8qufl"]
+[ext_resource type="Texture2D" uid="uid://lig78ma6x2br" path="res://Files/Sprites/SpriteSetA/Editor/ShoulderFlick.png" id="10_awd0x"]
+[ext_resource type="Texture2D" uid="uid://c2wuycruamjf5" path="res://Files/Sprites/SpriteSetA/Editor/Editor Bar.png" id="16_ok5ht"]
+[ext_resource type="Texture2D" uid="uid://dgx7g3k8vfwb4" path="res://Files/Sprites/SpriteSetA/Notes/BarSmallBeat.png" id="17_dpg7i"]
+[ext_resource type="Texture2D" uid="uid://bmpyhfccn5b0q" path="res://Files/Sprites/SpriteSetA/Hitter/BarHitter.png" id="18_vuf7v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjw7w"]
+size = Vector2(29, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_blc1j"]
+size = Vector2(29, 31)
+
+[node name="Editor" type="Node2D"]
+script = ExtResource("1_6j6c3")
+
+[node name="SquidBeatz3" parent="." instance=ExtResource("1_xucjw")]
+
+[node name="EditorMenu" type="Node2D" parent="."]
+z_index = 2
+z_as_relative = false
+scale = Vector2(2, 2)
+
+[node name="Options" type="Node2D" parent="EditorMenu"]
+z_index = 4096
+z_as_relative = false
+
+[node name="MenuSettingsSelect" type="Sprite2D" parent="EditorMenu/Options"]
+position = Vector2(810.5, -30)
+texture = ExtResource("3_wgmkn")
+
+[node name="GoDown" type="Area2D" parent="EditorMenu/Options"]
+z_index = 1
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EditorMenu/Options/GoDown"]
+position = Vector2(885.5, 14.5)
+shape = SubResource("RectangleShape2D_mjw7w")
+
+[node name="IncrementFlick" type="Sprite2D" parent="EditorMenu/Options"]
+position = Vector2(841.5, -78.5)
+texture = ExtResource("4_k5qy1")
+vframes = 4
+
+[node name="Inc1" type="Button" parent="EditorMenu/Options/IncrementFlick"]
+offset_left = -49.0
+offset_top = -7.0
+offset_right = -26.0
+offset_bottom = 7.0
+
+[node name="Inc2" type="Button" parent="EditorMenu/Options/IncrementFlick"]
+offset_left = -24.0
+offset_top = -7.0
+offset_right = -1.0
+offset_bottom = 7.0
+
+[node name="Inc4" type="Button" parent="EditorMenu/Options/IncrementFlick"]
+offset_left = 1.0
+offset_top = -7.0
+offset_right = 24.0
+offset_bottom = 7.0
+
+[node name="Inc8" type="Button" parent="EditorMenu/Options/IncrementFlick"]
+offset_left = 25.5
+offset_top = -6.5
+offset_right = 48.5
+offset_bottom = 7.5
+
+[node name="SaveFlick" type="Sprite2D" parent="EditorMenu/Options"]
+position = Vector2(760.5, -35)
+texture = ExtResource("5_mp0q0")
+hframes = 2
+
+[node name="Button" type="Button" parent="EditorMenu/Options/SaveFlick"]
+offset_left = -32.0
+offset_top = -28.0
+offset_right = 33.0
+offset_bottom = 28.0
+flat = true
+
+[node name="ValueChanging" type="Node2D" parent="EditorMenu/Options"]
+position = Vector2(800, -67.5)
+
+[node name="Labels" type="Node2D" parent="EditorMenu/Options/ValueChanging"]
+scale = Vector2(0.2, 0.2)
+
+[node name="LenLabel" type="Label" parent="EditorMenu/Options/ValueChanging/Labels"]
+offset_left = 10.0
+offset_top = 162.5
+offset_right = 82.0
+offset_bottom = 214.5
+theme_override_fonts/font = ExtResource("6_75ww1")
+theme_override_font_sizes/font_size = 40
+
+[node name="AmountLabel" type="Label" parent="EditorMenu/Options/ValueChanging/Labels"]
+offset_left = 137.5
+offset_top = 162.5
+offset_right = 209.5
+offset_bottom = 214.5
+theme_override_fonts/font = ExtResource("6_75ww1")
+theme_override_font_sizes/font_size = 40
+
+[node name="DelayLabel" type="Label" parent="EditorMenu/Options/ValueChanging/Labels"]
+offset_left = 262.5
+offset_top = 165.0
+offset_right = 334.5
+offset_bottom = 217.0
+theme_override_fonts/font = ExtResource("6_75ww1")
+theme_override_font_sizes/font_size = 40
+
+[node name="BPMLabel" type="Label" parent="EditorMenu/Options/ValueChanging/Labels"]
+offset_left = 382.5
+offset_top = 167.5
+offset_right = 454.5
+offset_bottom = 219.5
+theme_override_fonts/font = ExtResource("6_75ww1")
+theme_override_font_sizes/font_size = 40
+
+[node name="LenUp" type="Button" parent="EditorMenu/Options/ValueChanging"]
+offset_left = 2.0
+offset_top = 6.0
+offset_right = 22.0
+offset_bottom = 17.0
+flat = true
+
+[node name="LenDown" type="Button" parent="EditorMenu/Options/ValueChanging"]
+offset_left = 2.0
+offset_top = 48.0
+offset_right = 22.0
+offset_bottom = 59.0
+flat = true
+
+[node name="NoteUp" type="Button" parent="EditorMenu/Options/ValueChanging"]
+offset_left = 27.0
+offset_top = 6.0
+offset_right = 48.0
+offset_bottom = 17.0
+flat = true
+
+[node name="NoteDown" type="Button" parent="EditorMenu/Options/ValueChanging"]
+offset_left = 27.0
+offset_top = 47.0
+offset_right = 47.0
+offset_bottom = 59.0
+flat = true
+
+[node name="DelayUp" type="Button" parent="EditorMenu/Options/ValueChanging"]
+offset_left = 52.0
+offset_top = 6.0
+offset_right = 73.0
+offset_bottom = 18.0
+flat = true
+
+[node name="DelayDown" type="Button" parent="EditorMenu/Options/ValueChanging"]
+offset_left = 52.0
+offset_top = 47.0
+offset_right = 72.0
+offset_bottom = 59.0
+flat = true
+
+[node name="BPMUp" type="Button" parent="EditorMenu/Options/ValueChanging"]
+offset_left = 77.0
+offset_top = 6.0
+offset_right = 97.0
+offset_bottom = 18.0
+flat = true
+
+[node name="BPMDown" type="Button" parent="EditorMenu/Options/ValueChanging"]
+offset_left = 77.0
+offset_top = 48.0
+offset_right = 97.0
+offset_bottom = 59.0
+flat = true
+
+[node name="Beats" type="Node2D" parent="EditorMenu"]
+z_index = 4096
+z_as_relative = false
+
+[node name="MenuBarSelect" type="Sprite2D" parent="EditorMenu/Beats"]
+position = Vector2(915.5, -31)
+texture = ExtResource("4_8063d")
+
+[node name="GoDown2" type="Area2D" parent="EditorMenu/Beats"]
+position = Vector2(915.5, 12.5)
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EditorMenu/Beats/GoDown2"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_blc1j")
+
+[node name="BigBeatFlick" type="Sprite2D" parent="EditorMenu/Beats"]
+position = Vector2(915.5, -16.5)
+texture = ExtResource("5_xgwyc")
+hframes = 2
+
+[node name="SmallBeatFlick" type="Sprite2D" parent="EditorMenu/Beats"]
+position = Vector2(915.5, -47)
+texture = ExtResource("6_tyj44")
+hframes = 2
+
+[node name="EraseFlick" type="Sprite2D" parent="EditorMenu/Beats"]
+position = Vector2(916, -75.5)
+texture = ExtResource("8_xu0do")
+hframes = 2
+
+[node name="SelectBig" type="Button" parent="EditorMenu/Beats"]
+offset_left = 903.0
+offset_top = -30.0
+offset_right = 927.0
+offset_bottom = -4.0
+flat = true
+
+[node name="SelectSmall" type="Button" parent="EditorMenu/Beats"]
+offset_left = 903.0
+offset_top = -61.0
+offset_right = 927.0
+offset_bottom = -35.0
+flat = true
+
+[node name="SelectEraseB" type="Button" parent="EditorMenu/Beats"]
+offset_left = 903.0
+offset_top = -89.0
+offset_right = 928.0
+offset_bottom = -63.0
+flat = true
+
+[node name="Notes" type="Node2D" parent="EditorMenu"]
+z_index = 4096
+z_as_relative = false
+
+[node name="MenuNoteSelect" type="Sprite2D" parent="EditorMenu/Notes"]
+position = Vector2(945.5, -61)
+texture = ExtResource("5_umxm4")
+
+[node name="GoDown3" type="Area2D" parent="EditorMenu/Notes"]
+position = Vector2(945.5, 87)
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EditorMenu/Notes/GoDown3"]
+position = Vector2(0, -73.5)
+shape = SubResource("RectangleShape2D_blc1j")
+
+[node name="EraseFlick" type="Sprite2D" parent="EditorMenu/Notes"]
+position = Vector2(946, -135.5)
+texture = ExtResource("8_xu0do")
+hframes = 2
+
+[node name="DoubleShoulderFlick" type="Sprite2D" parent="EditorMenu/Notes"]
+position = Vector2(945.5, -106)
+texture = ExtResource("7_lhu3k")
+hframes = 2
+
+[node name="DoubleFaceFlick" type="Sprite2D" parent="EditorMenu/Notes"]
+position = Vector2(945.5, -75.5)
+texture = ExtResource("6_87tee")
+hframes = 2
+
+[node name="ShoulderFlick" type="Sprite2D" parent="EditorMenu/Notes"]
+position = Vector2(945.5, -46.5)
+texture = ExtResource("10_awd0x")
+hframes = 2
+
+[node name="FaceFlick" type="Sprite2D" parent="EditorMenu/Notes"]
+position = Vector2(945.5, -15.5)
+texture = ExtResource("9_8qufl")
+hframes = 2
+
+[node name="Erase" type="Button" parent="EditorMenu/Notes"]
+offset_left = 933.0
+offset_top = -149.0
+offset_right = 959.0
+offset_bottom = -123.0
+flat = true
+
+[node name="DoubleShoulder" type="Button" parent="EditorMenu/Notes"]
+offset_left = 932.0
+offset_top = -120.0
+offset_right = 958.0
+offset_bottom = -93.0
+flat = true
+
+[node name="DoubleFace" type="Button" parent="EditorMenu/Notes"]
+offset_left = 932.0
+offset_top = -90.0
+offset_right = 958.0
+offset_bottom = -63.0
+flat = true
+
+[node name="Shoulder" type="Button" parent="EditorMenu/Notes"]
+offset_left = 933.0
+offset_top = -61.0
+offset_right = 959.0
+offset_bottom = -34.0
+flat = true
+
+[node name="Face" type="Button" parent="EditorMenu/Notes"]
+offset_left = 932.0
+offset_top = -29.0
+offset_right = 958.0
+offset_bottom = -3.0
+flat = true
+
+[node name="ShowChart" type="Node2D" parent="EditorMenu"]
+z_index = -100
+z_as_relative = false
+
+[node name="EditorBar" type="Sprite2D" parent="EditorMenu/ShowChart"]
+position = Vector2(479.5, 150)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_ok5ht")
+
+[node name="BarSmallBeat" type="Sprite2D" parent="EditorMenu/ShowChart"]
+z_index = 4096
+z_as_relative = false
+position = Vector2(500, 150)
+scale = Vector2(0.5, 2)
+texture = ExtResource("17_dpg7i")
+
+[node name="BarHitter" type="Sprite2D" parent="EditorMenu/ShowChart"]
+z_index = -4
+position = Vector2(500, 150)
+texture = ExtResource("18_vuf7v")
+
+[node name="NoteHold" type="Node2D" parent="."]
+z_as_relative = false
+
+[connection signal="SongSelected" from="SquidBeatz3" to="." method="_on_squid_beatz_3_song_selected"]
+[connection signal="mouse_entered" from="EditorMenu/Options/GoDown" to="." method="_on_go_down_mouse_entered"]
+[connection signal="pressed" from="EditorMenu/Options/IncrementFlick/Inc1" to="." method="_on_inc_1_pressed"]
+[connection signal="pressed" from="EditorMenu/Options/IncrementFlick/Inc2" to="." method="_on_inc_2_pressed"]
+[connection signal="pressed" from="EditorMenu/Options/IncrementFlick/Inc4" to="." method="_on_inc_4_pressed"]
+[connection signal="pressed" from="EditorMenu/Options/IncrementFlick/Inc8" to="." method="_on_inc_8_pressed"]
+[connection signal="pressed" from="EditorMenu/Options/SaveFlick/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="EditorMenu/Options/ValueChanging/LenUp" to="." method="_on_len_up_pressed"]
+[connection signal="pressed" from="EditorMenu/Options/ValueChanging/LenDown" to="." method="_on_len_down_pressed"]
+[connection signal="pressed" from="EditorMenu/Options/ValueChanging/NoteUp" to="." method="_on_note_up_pressed"]
+[connection signal="pressed" from="EditorMenu/Options/ValueChanging/NoteDown" to="." method="_on_note_down_pressed"]
+[connection signal="pressed" from="EditorMenu/Options/ValueChanging/DelayUp" to="." method="_on_delay_up_pressed"]
+[connection signal="pressed" from="EditorMenu/Options/ValueChanging/DelayDown" to="." method="_on_delay_down_pressed"]
+[connection signal="pressed" from="EditorMenu/Options/ValueChanging/BPMUp" to="." method="_on_bpm_up_pressed"]
+[connection signal="pressed" from="EditorMenu/Options/ValueChanging/BPMDown" to="." method="_on_bpm_down_pressed"]
+[connection signal="mouse_entered" from="EditorMenu/Beats/GoDown2" to="." method="_on_go_down_2_mouse_entered"]
+[connection signal="pressed" from="EditorMenu/Beats/SelectBig" to="." method="_on_select_big_pressed"]
+[connection signal="pressed" from="EditorMenu/Beats/SelectSmall" to="." method="_on_select_small_pressed"]
+[connection signal="pressed" from="EditorMenu/Beats/SelectEraseB" to="." method="_on_select_erase_b_pressed"]
+[connection signal="mouse_entered" from="EditorMenu/Notes/GoDown3" to="." method="_on_go_down_3_mouse_entered"]
+[connection signal="pressed" from="EditorMenu/Notes/Erase" to="." method="_on_erase_pressed"]
+[connection signal="pressed" from="EditorMenu/Notes/DoubleShoulder" to="." method="_on_double_shoulder_pressed"]
+[connection signal="pressed" from="EditorMenu/Notes/DoubleFace" to="." method="_on_double_face_pressed"]
+[connection signal="pressed" from="EditorMenu/Notes/Shoulder" to="." method="_on_shoulder_pressed"]
+[connection signal="pressed" from="EditorMenu/Notes/Face" to="." method="_on_face_pressed"]

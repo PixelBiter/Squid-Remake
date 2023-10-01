@@ -1,0 +1,1 @@
+{"Chart":[0,0] ,"Beats":[0,0] ,"BPM":192.0 ,"Wait":0.0390625 ,"Delay":1 ,"Amount":156 ,"MusicLocation":"res://Files/Music/BaseGame/13.Bouyant Boogie - Turquoise October.mp3" ,"SongName":"13. Bouyant Boogie - Turquoise October" }
