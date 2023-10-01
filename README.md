@@ -13,6 +13,16 @@ I will try to keep consistently updating the project to make it better. More inf
 (Splatoon 3 Server Link: https://discord.gg/splatoon )
 (Post date: 1st October 2023  Around 22:15)
 
+IMPORTANT NOTE:
+The Squid Beatz PC is the version you should download. It has keyboard support on it, the other only has controller.
+Keybinds:
+zxcv - Face
+m,./ - Shoulder
+bn - Double (Face+Shoulder)
+Left Arrow - Left in menu
+Right Arrow - Right in menu
+Down Arrow - Play Song
+
 
 I don't know what else to put here, so have a good day!
 
