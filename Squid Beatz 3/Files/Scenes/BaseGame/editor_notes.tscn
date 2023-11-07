@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfyb38d4thrw6"]
-
-[ext_resource type="Script" path="res://Files/Scripts/BaseGame/editor_notes.gd" id="1_inte6"]
-
-[node name="EditorNotes" type="Sprite2D"]
-y_sort_enabled = true
-scale = Vector2(2, 2)
-script = ExtResource("1_inte6")
