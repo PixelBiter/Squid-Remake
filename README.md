@@ -1,4 +1,27 @@
 # Squid-Remake
+
+**-----Update Post: 7th November 2023-----**
+Hello Again!
+This is PixelToad again, here to bring a small update on what is going on with the remake.
+
+I've taken a break from the game due to exams occurring (as well as procrastination) so I can't work on it as much, but I'm slowly working on Squid Beatz 2 PC.
+SB2PC is a remade version of the game with the features of Squid Beatz 2 being put in before anything else.
+That means I'm reworking note spawning, the song reading, sprites, etc.
+I'm slowly getting through it, but no release date for the updated version will be available for a while since this is a single dev project (And that dev is me!)
+
+Just reminders, feel free to join the discussion on the Splatoon 3 server on the Q&A posts in Squid Beatz Remake Discussion(Discord Server: https://discord.gg/splatoon )
+Also feel free to @ me or message me directly on Discord.
+
+This project is completely open source since it is mainly a practice project and something nice to put out as a first big project as a game dev.
+It being open source means you can use all the charts, software and sprites within the project, but please do credit the work by putting a link to this Github on the project or just mentioning it.
+
+That is about all I have to say about the project so, cya!
+
+- Signing off, PixelToad
+
+
+
+**-----Update Post: 1st October 2023-----**
 Hello!
 
 This is PixelToad with the first release of Squid Beatz PC (Originally named Squid Beatz 3).
