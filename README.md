@@ -1,6 +1,7 @@
 # Squid-Remake
 
 **-----Update Post: 7th November 2023-----**
+
 Hello Again!
 This is PixelToad again, here to bring a small update on what is going on with the remake.
 
@@ -22,6 +23,7 @@ That is about all I have to say about the project so, cya!
 
 
 **-----Update Post: 1st October 2023-----**
+
 Hello!
 
 This is PixelToad with the first release of Squid Beatz PC (Originally named Squid Beatz 3).
