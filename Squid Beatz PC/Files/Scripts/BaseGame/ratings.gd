@@ -26,8 +26,8 @@ func _ready():
 		$MISS.visible = true
 		G.RatingSignal = ""
 
-func _physics_process(delta):
-	position.y -= 1
+func _process(delta):
+	position.y -= 100 * delta
 
 
 func _on_timer_timeout():

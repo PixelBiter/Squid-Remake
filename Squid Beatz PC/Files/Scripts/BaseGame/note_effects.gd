@@ -48,7 +48,7 @@ func _process(delta):
 		queue_free()
 	if G.Playing != true:
 		queue_free()
-	$Note.global_position.y -= 50
+	$Note.global_position.y -= 3000 * delta
 	$Squid.global_position = Vector2(300,796)
 	$Octo.global_position = Vector2(300,704)
 	$Bar.global_position.x = 300

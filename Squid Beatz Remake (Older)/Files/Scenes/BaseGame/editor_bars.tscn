@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfb4olxuevpc6"]
+
+[ext_resource type="Script" path="res://Files/Scripts/BaseGame/editor_bars.gd" id="1_puw1w"]
+
+[node name="editor_bars" type="Sprite2D"]
+z_index = -1
+y_sort_enabled = true
+script = ExtResource("1_puw1w")

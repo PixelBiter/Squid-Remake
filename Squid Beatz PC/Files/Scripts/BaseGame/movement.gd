@@ -7,12 +7,12 @@ func _ready():
 	position = Vector2(2000,750)
 	TimePosition = G.TotalTime
 
-func _process(_delta):
+func _process(delta):
 	if G.Playing == true:
 		if G.TotalTime > 0:
 			global_position.x = -(G.TotalTime*G.CurrentBPM*3) + lastposition + (TimePosition*G.CurrentBPM*3)
 		else:
-			global_position.x -= G.CurrentBPM * 0.05
+			global_position.x -= G.CurrentBPM * 3 * delta #0.05
 			lastposition = global_position.x
 	if G.Playing != true:
 		queue_free()

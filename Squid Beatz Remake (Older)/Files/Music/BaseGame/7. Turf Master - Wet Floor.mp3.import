@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://tol2mj765va4"
+path="res://.godot/imported/7. Turf Master - Wet Floor.mp3-c6836271836271866f1d5ccf7ee48ad3.mp3str"
+
+[deps]
+
+source_file="res://Files/Music/BaseGame/7. Turf Master - Wet Floor.mp3"
+dest_files=["res://.godot/imported/7. Turf Master - Wet Floor.mp3-c6836271836271866f1d5ccf7ee48ad3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
