@@ -1,5 +1,7 @@
 extends Node
 ## Originally made by PixelToad ('pixeltoad' on discord)
+var FauxSongList
+var fauxsonglist
 var SongList = ["res://Files/ChartFiles/BaseGame/1. Inkoming - Wet Floor.txt",
 "res://Files/ChartFiles/BaseGame/2. Rip Entry - Wet Floor.txt",
 "res://Files/ChartFiles/BaseGame/3. Undertow - Wet Floor.txt",
@@ -16,3 +18,19 @@ var SongList = ["res://Files/ChartFiles/BaseGame/1. Inkoming - Wet Floor.txt",
 "res://Files/ChartFiles/BaseGame/14. Shooting Starfish - Turquoise October.txt",
 "res://Files/ChartFiles/BaseGame/15. Tentacular Circus - Turquoise October.txt"]
 var Medals = ["","","","","","","","","","","","","","",""]
+
+func _ready():
+	if FileAccess.open("res://Files/ChartFiles/SongList.txt", FileAccess.READ) == null:
+		_savesongs()
+		FauxSongList = FileAccess.open("res://Files/ChartFiles/SongList.txt", FileAccess.READ)
+		fauxsonglist = JSON.parse_string(FauxSongList.get_as_text())
+		SongList = fauxsonglist
+	else:
+		FauxSongList = FileAccess.open("res://Files/ChartFiles/SongList.txt", FileAccess.READ)
+		fauxsonglist = JSON.parse_string(FauxSongList.get_as_text())
+		SongList = fauxsonglist
+
+func _savesongs():
+	FauxSongList = FileAccess.open("res://Files/ChartFiles/SongList.txt", FileAccess.WRITE)
+	fauxsonglist = JSON.stringify(SongList)
+	FauxSongList.store_line(fauxsonglist)

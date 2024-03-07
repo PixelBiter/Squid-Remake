@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bybljpjoyx6k4"]
+[gd_scene load_steps=11 format=3 uid="uid://bybljpjoyx6k4"]
 
 [ext_resource type="Script" path="res://Files/Scripts/BaseGame/note_effects.gd" id="1_gqywy"]
+[ext_resource type="Texture2D" uid="uid://ctohtbwn8ujoq" path="res://Files/Sprites/SpriteSetA/Hitter/BarLightDouble.png" id="2_6sca4"]
 [ext_resource type="Texture2D" uid="uid://cqtk5lqjojjn8" path="res://Files/Sprites/SpriteSetA/Ratings/FaceSquid.png" id="2_c3hn5"]
 [ext_resource type="Texture2D" uid="uid://cv05sqhxbmh63" path="res://Files/Sprites/SpriteSetA/Ratings/ShoulderOcto.png" id="3_71dmp"]
 
@@ -43,7 +44,8 @@ _data = {
 }
 
 [sub_resource type="Animation" id="Animation_8q2xm"]
-length = 0.001
+length = 0.1
+step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -90,6 +92,7 @@ script = ExtResource("1_gqywy")
 z_index = -8
 z_as_relative = false
 scale = Vector2(1, 2000)
+texture = ExtResource("2_6sca4")
 hframes = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Bar"]
