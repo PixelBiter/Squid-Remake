@@ -12,4 +12,5 @@
 "res://Files/ChartFiles/BaseGame/12. The Girl From Inkopolis - Turquoise October.txt",
 "res://Files/ChartFiles/BaseGame/13. Bouyant Boogie - Turquoise October.txt",
 "res://Files/ChartFiles/BaseGame/14. Shooting Starfish - Turquoise October.txt",
-"res://Files/ChartFiles/BaseGame/15. Tentacular Circus - Turquoise October.txt"]
+"res://Files/ChartFiles/BaseGame/15. Tentacular Circus - Turquoise October.txt",
+"res://Files/ChartFiles/Custom/Splattack!.txt"]

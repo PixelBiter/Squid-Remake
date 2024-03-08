@@ -34,11 +34,17 @@ func _updatesong():
 	G.CurrentLength = (len(str(G.CurrentSong))-1)/3
 	G.CurrentSongName = _textreading.SongName
 	G.CurrentSongLocation = _textreading.MusicLocation
-	$Audio/Music.stream = load(_textreading.MusicLocation)
+	$Audio/Music.stream = load_mp3(_textreading.MusicLocation)
 	$Timer/BeatTimer.wait_time = G.CurrentWait
 	$Background/Title.text = _textreading.SongName
 	emit_signal("SongSelected",MenuSelectSong)
 	_medalshow()
+
+func load_mp3(path):
+	var file = FileAccess.open(path, FileAccess.READ)
+	var sound = AudioStreamMP3.new()
+	sound.data = file.get_buffer(file.get_length())
+	return sound
 
 func _input(event):
 	$Timer/InputTimer1.start()
