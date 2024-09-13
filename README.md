@@ -1,5 +1,14 @@
 # Squid-Remake
 
+**-----Update Post: 13th September 2023-----**
+
+Hello!
+Should've put this notification here earlier but I have made a better remake of Squid Beatz in another repository
+You can check out my Squid-Beatz repository for it
+
+
+
+
 **-----Update Post: 7th November 2023-----**
 
 Hello Again!
