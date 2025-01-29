@@ -1,5 +1,9 @@
 # Squid-Remake
 
+**-----Update Post: 29th January 2025-----**
+Geez it's been a while since I've looked back here
+This is the older version of the project so here's the new link: https://github.com/PixelBiter/Squid-Beatz
+
 **-----Update Post: 13th September 2023-----**
 
 Hello!
